@@ -19,6 +19,7 @@
   * [originOS specific keys](my-account/rotur-account-objects/originos-specific-keys.md)
 * [Requesting my ofsf storage](my-account/requesting-my-ofsf-storage.md)
 * [Rotur Badges](my-account/rotur-badges.md)
+* [Transactions and Taxes](my-account/transactions-and-taxes.md)
 
 ## Claw
 
