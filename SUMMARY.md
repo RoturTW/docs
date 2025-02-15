@@ -18,6 +18,12 @@
 * [Rotur Account Objects](my-account/rotur-account-objects/README.md)
   * [originOS specific keys](my-account/rotur-account-objects/originos-specific-keys.md)
 
+## Claw
+
+* [What is claw](claw/what-is-claw.md)
+* [Api Endpoints](claw/api-endpoints/README.md)
+  * [/feed](claw/api-endpoints/feed.md)
+
 ## The Rotur Extension
 
 * [Account Keys](the-rotur-extension/account-keys.md)
