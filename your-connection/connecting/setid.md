@@ -34,3 +34,19 @@ You should then recieve these packets from the server
   }
 }
 ```
+
+### Pre-authorised rotur usernames
+
+A pre-authorised rotur username is any username that has a 3 letter designation, then a hyphen, then a string of 32 random letters.
+
+#### Valid
+
+* ori-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf
+* rtr-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf
+* wow-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf
+
+#### Invalid
+
+* oriEwZWksbrYDBAxziSZwWejSwK2QMMzGZf
+* r-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf
+* hello-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf

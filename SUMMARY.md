@@ -8,7 +8,15 @@
 * [Connecting](your-connection/connecting/README.md)
   * [Handshake](your-connection/connecting/handshake.md)
   * [SetID](your-connection/connecting/setid.md)
+  * [Link](your-connection/connecting/link.md)
+* [Authentication](your-connection/authentication/README.md)
+  * [Login](your-connection/authentication/login.md)
 * [Rotur Designations](your-connection/rotur-designations.md)
+
+## My Account
+
+* [Rotur Account Objects](my-account/rotur-account-objects/README.md)
+  * [originOS specific keys](my-account/rotur-account-objects/originos-specific-keys.md)
 
 ## The Rotur Extension
 
