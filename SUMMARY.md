@@ -17,6 +17,7 @@
 
 * [Rotur Account Objects](my-account/rotur-account-objects/README.md)
   * [originOS specific keys](my-account/rotur-account-objects/originos-specific-keys.md)
+* [Requesting my ofsf storage](my-account/requesting-my-ofsf-storage.md)
 
 ## Claw
 
