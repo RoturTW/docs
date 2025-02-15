@@ -23,7 +23,7 @@ Just put in a github issue to say to add it and ill put it below, please dont us
 
 ### Partially implemented
 
-* `crl` - [Constellinux](https://github.com/Constellinux)
+* `crl` - [Constellinux](https://github.com/ThatBeaverDev/Constellinux)
 * `flf` - [flufiOS](https://github.com/ThePandaDever/Flufi-OS)
 * `ove` - [OliveOS (formerly NothingOS)](https://github.com/JustN00ne/NothingOS)
 
