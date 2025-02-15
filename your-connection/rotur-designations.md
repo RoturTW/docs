@@ -21,9 +21,11 @@ Just put in a github issue to say to add it and ill put it below, please dont us
 * `ori` - [originOS](https://origin.mistium.com)
 * `nov` - [novaOS](https://adthoughtsglobal.github.io/Nova-OS/)
 
-- `crl` - [Constellinux](https://github.com/Constellinux)
-- `flf` - [flufiOS](https://github.com/ThePandaDever/Flufi-OS)
-- `ove` - [OliveOS (formerly NothingOS)](https://github.com/JustN00ne/NothingOS)
+### Partially implemented
+
+* `crl` - [Constellinux](https://github.com/Constellinux)
+* `flf` - [flufiOS](https://github.com/ThePandaDever/Flufi-OS)
+* `ove` - [OliveOS (formerly NothingOS)](https://github.com/JustN00ne/NothingOS)
 
 ### Not Implemented Into System Yet:
 
