@@ -2,6 +2,12 @@
 
 A Rotur account object is a simple json object of keys and values.
 
+## Key Limits
+
+* Key names must be less than or equal 20 characters long
+* Key values must be less than or equal to 1000 characters long
+* The full account object is limited to 25,000 characters of text
+
 ## Rotur Keys
 
 ### Static (Read Only)
