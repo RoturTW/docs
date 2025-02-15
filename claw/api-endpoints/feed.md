@@ -1,20 +1,20 @@
 # /feed
 
-## About
+### About
 
 The feed is the main display of claw, allowing you to view an array of posts
 
 
 
-## Parameters
+### Parameters
 
-### limit
+#### limit
 
 {% embed url="https://claw.rotur.dev/feed?limit=10" %}
 
 The limit can be between 1 and 100, and restricts how many posts to ask the server for.
 
-### offset
+#### offset
 
 {% embed url="https://claw.rotur.dev/feed?offset=1" %}
 

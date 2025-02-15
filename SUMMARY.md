@@ -24,6 +24,16 @@
 * [What is claw](claw/what-is-claw.md)
 * [Api Endpoints](claw/api-endpoints/README.md)
   * [/feed](claw/api-endpoints/feed.md)
+  * [/post](claw/api-endpoints/post.md)
+  * [/follow](claw/api-endpoints/follow.md)
+  * [/unfollow](claw/api-endpoints/unfollow.md)
+  * [/followers](claw/api-endpoints/followers.md)
+  * [/following](claw/api-endpoints/following.md)
+  * [/profile](claw/api-endpoints/profile.md)
+  * [/delete](claw/api-endpoints/delete.md)
+  * [/rate](claw/api-endpoints/rate.md)
+  * [/following\_feed](claw/api-endpoints/following_feed.md)
+  * [/reply](claw/api-endpoints/reply.md)
 
 ## The Rotur Extension
 
