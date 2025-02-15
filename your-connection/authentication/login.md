@@ -47,6 +47,8 @@ Upon successful authentication (your username and password are correct) you will
 }
 ```
 
+Find out about rotur account objects here: [rotur-account-objects](../../my-account/rotur-account-objects/ "mention")
+
 ## Incorrect details
 
 If your password or username is wrong you will recieve this message
