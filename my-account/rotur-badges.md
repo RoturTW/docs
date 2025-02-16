@@ -4,12 +4,6 @@ Rotur badges are a simple and easy way to show some cool icons on your profile f
 
 They are stored in the sys.badges array on your rotur account.
 
-## The Badges JSON
-
-This json file contains all the badges along with their icn images.
-
-{% @github-files/github-code-block url="https://github.com/RoturTW/Badges/blob/main/badges.json" %}
-
 
 
 ## General Badges
@@ -46,3 +40,9 @@ originOS
 Constellinux
 - this account was created on Constellinxu / with the Constellinux Project
 ```
+
+## The Badges JSON
+
+This json file contains all the badges along with their icn images. This makes it easy to parse and display the badges that your user has.
+
+{% @github-files/github-code-block url="https://github.com/RoturTW/Badges/blob/main/badges.json" %}
