@@ -12,6 +12,9 @@
 * [Authentication](your-connection/authentication/README.md)
   * [Login](your-connection/authentication/login.md)
 * [Rotur Designations](your-connection/rotur-designations.md)
+* [Websocket Commands](your-connection/websocket-commands/README.md)
+  * [Global Message (gmsg)](your-connection/websocket-commands/global-message-gmsg.md)
+  * [Private Message (pmsg)](your-connection/websocket-commands/private-message-pmsg.md)
 
 ## My Account
 
