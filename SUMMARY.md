@@ -21,6 +21,10 @@
 * [Rotur Badges](my-account/rotur-badges.md)
 * [Transactions and Taxes](my-account/transactions-and-taxes.md)
 
+## Assorted APIs
+
+* [avatars.rotur.dev](assorted-apis/avatars.rotur.dev.md)
+
 ## Claw
 
 * [What is claw](claw/what-is-claw.md)
