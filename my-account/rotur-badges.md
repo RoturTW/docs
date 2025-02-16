@@ -4,6 +4,10 @@ Rotur badges are a simple and easy way to show some cool icons on your profile f
 
 They are stored in the sys.badges array on your rotur account.
 
+## The Badges Repo
+
+{% @github-files/github-code-block %}
+
 ## General Badges
 
 ```
