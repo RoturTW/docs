@@ -2,6 +2,10 @@
 
 ### What is Rotur?
 
+Rotur is a cloudlink based, networking packet standard and accounts system packaged into an easy to use extension. Made to make turbowarp operating systems more interconnected and easier to develop.
+
+### When is Rotur? :3
+
 Rotur is a project started on the 29th of June, 2024 by:
 
 | ![](https://avatars.githubusercontent.com/u/92952823?v=4) | ![](https://avatars.githubusercontent.com/u/73702185?v=4) |
