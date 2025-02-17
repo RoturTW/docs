@@ -28,6 +28,13 @@
 
 * [avatars.rotur.dev](assorted-apis/avatars.rotur.dev.md)
 
+## web
+
+* [RWL](web/rwl/README.md)
+  * [Attributes](web/rwl/attributes.md)
+  * [Basics](web/rwl/basics.md)
+  * [Structure](web/rwl/structure.md)
+
 ## Claw
 
 * [What is claw](claw/what-is-claw.md)
