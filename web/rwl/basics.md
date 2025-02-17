@@ -53,4 +53,6 @@ script [type="rtr"] {
 
 Can be useful for more dynamic and complicated websites that require custom graphics.
 
-> \[!NOTE] Drawing things with rtr can also be used on element based websites.
+{% hint style="info" %}
+Drawing things with rtr can also be used on element based websites.
+{% endhint %}

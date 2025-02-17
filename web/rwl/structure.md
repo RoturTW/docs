@@ -2,7 +2,7 @@
 
 RWL is mainly composed of a handfull of things:
 
-### Elements
+## Elements
 
 A node used to define objects, that can contain optional attributes or nested elements (blocks)
 
@@ -18,7 +18,7 @@ Elements can also have a number of attributes.
 "hi" [id = "myID", font = "llama"]
 ```
 
-### Blocks
+## Blocks
 
 Type of element that contains nested nodes
 
@@ -28,7 +28,7 @@ name {
 }
 ```
 
-### Segments
+## Segments
 
 One or more elements as a list
 
@@ -37,7 +37,7 @@ One or more elements as a list
 frame {}
 ```
 
-### Attribute
+## Attribute
 
 A key or flag, usually inside square brackets in an element.
 
@@ -49,11 +49,11 @@ id = "myID"
 flex
 ```
 
-### Value
+## Value
 
 Simply a value that can denote somthing.
 
-#### str (string):
+### str (string):
 
 text in "", '' or \`\`:
 
@@ -63,7 +63,7 @@ text in "", '' or \`\`:
 `:3`
 ```
 
-#### num (number):
+### num (number):
 
 any numerical number:
 

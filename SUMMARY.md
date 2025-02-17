@@ -31,9 +31,12 @@
 ## web
 
 * [RWL](web/rwl/README.md)
-  * [Attributes](web/rwl/attributes.md)
   * [Basics](web/rwl/basics.md)
   * [Structure](web/rwl/structure.md)
+  * [Attributes](web/rwl/attributes/README.md)
+    * [Text](web/rwl/attributes/text.md)
+    * [Frame](web/rwl/attributes/frame.md)
+    * [Section](web/rwl/attributes/section.md)
 
 ## Claw
 
