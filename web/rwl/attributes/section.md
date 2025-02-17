@@ -6,52 +6,16 @@ description: Attribute list for sections
 
 ## Key-Value Pairs
 
-### size
-
-This defines the size of the section.
-
-```javascript
-frame [Horizontal] {
-    section [size = 100] { // 100 pixels / units in width
-        // code
-    }
-}
-```
-
-{% hint style="info" %}
-This is only usable in 1 axes frames:
-{% endhint %}
-
-
-
-### width
-
-This defines the width of the section.
-
 <pre class="language-javascript"><code class="lang-javascript">section [width = 50%] {
 <strong>    // code
 </strong>}
 </code></pre>
-
-{% hint style="info" %}
-This is only usable in frames that are split horizontally.
-{% endhint %}
-
-
-
-### height
-
-This defines the height of the section.
 
 ```javascript
 section [height = 30%] {
     // code
 }
 ```
-
-{% hint style="info" %}
-This is only usable in frames that are split vertically
-{% endhint %}
 
 overflow
 
