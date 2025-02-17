@@ -23,7 +23,7 @@ key=value
 
 ### Flag
 
-Used to set a boolean attribute to true, or to describe a specific behavour:
+Used to set a boolean attribute to true, or to describe a specific behaviour:
 
 ```js
 Horizontal
