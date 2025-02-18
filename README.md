@@ -6,11 +6,15 @@ Rotur is a cloudlink based, networking packet standard and accounts system packa
 
 ### When is Rotur? :3
 
-Rotur is a project started on the 29th of June, 2024 by:
+Rotur is a project started on the 29th of June, 2024.
 
-| ![](https://avatars.githubusercontent.com/u/92952823?v=4) | ![](https://avatars.githubusercontent.com/u/73702185?v=4) |
-| :-------------------------------------------------------: | :-------------------------------------------------------: |
-|               [Mistium](https://mistium.com)              |         [Flufi](https://github.com/ThePandaDever)         |
+### Devs
+
+Rotur's current developers are:
+
+| ![](https://avatars.githubusercontent.com/u/92952823?v=4) | ![](https://avatars.githubusercontent.com/u/73702185?v=4) | <img src=".gitbook/assets/image.png" alt="" data-size="original"> |
+| :-------------------------------------------------------: | :-------------------------------------------------------: | :---------------------------------------------------------------: |
+|               [Mistium](https://mistium.com)              |         [Flufi](https://github.com/ThePandaDever)         |                 [Layz](https://github.com/B1j2754)                |
 
 ***
 
