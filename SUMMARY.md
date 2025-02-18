@@ -37,6 +37,7 @@
     * [Text](web/rwl/attributes/text.md)
     * [Frame](web/rwl/attributes/frame.md)
     * [Section](web/rwl/attributes/section.md)
+  * [Alignments and Anchors](web/rwl/alignments-and-anchors.md)
 * [RTR](web/rtr.md)
 
 ## Claw

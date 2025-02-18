@@ -41,13 +41,28 @@ The space between each line in a font
 "Text With\nBig Lines" [line_height=2]
 ```
 
-### alignment
+### anchor
 
 The side(s) that the text will be neighboring, which can use both their full name and short name so e.g. "bottom right" and "br"
 
 ```javascript
-"Im in the corner :3" [alignment="top left"]
+"Im in the corner :3" [anchor="top left"]
 ```
+
+### alignment
+
+The position from where the element's text will start from:
+
+```javascript
+"Im centered :3" [alignment="center"],
+"Im centered from the left" [alignment="left"]
+```
+
+{% hint style="info" %}
+alignments use the same names as anchors.
+{% endhint %}
+
+
 
 ### link
 
