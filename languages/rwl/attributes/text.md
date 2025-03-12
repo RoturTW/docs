@@ -24,7 +24,7 @@ The size of the text, the default text size being 10.
 "Large Text" [size=20]
 ```
 
-spacing
+### spacing
 
 The space between each character in a font
 
@@ -62,7 +62,17 @@ The position from where the element's text will start from:
 alignments use the same names as anchors.
 {% endhint %}
 
+### padding
 
+The space between the text and the border of a frame, the default being 10.
+
+```javascript
+"Ive got padding :P" [padding=100,anchor="tl"]
+```
+
+{% hint style="info" %}
+this doesnt have any affect when the anchor is the center.
+{% endhint %}
 
 ### link
 

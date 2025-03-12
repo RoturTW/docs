@@ -28,17 +28,18 @@
 
 * [avatars.rotur.dev](assorted-apis/avatars.rotur.dev.md)
 
-## web
+## languages
 
-* [RWL](web/rwl/README.md)
-  * [Basics](web/rwl/basics.md)
-  * [Structure](web/rwl/structure.md)
-  * [Attributes](web/rwl/attributes.md)
-    * [Text](web/rwl/attributes/text.md)
-    * [Frame](web/rwl/attributes/frame.md)
-    * [Section](web/rwl/attributes/section.md)
-  * [Alignments and Anchors](web/rwl/alignments-and-anchors.md)
-* [RTR](web/rtr.md)
+* [RWL](languages/rwl/README.md)
+  * [Basics](languages/rwl/basics.md)
+  * [Structure](languages/rwl/structure.md)
+  * [Attributes](languages/rwl/attributes/README.md)
+    * [Text](languages/rwl/attributes/text.md)
+    * [Frame](languages/rwl/attributes/frame.md)
+    * [Section](languages/rwl/attributes/section.md)
+  * [Alignments and Anchors](languages/rwl/alignments-and-anchors.md)
+* [RTR](languages/rtr.md)
+* [RDF](languages/rdf.md)
 
 ## Claw
 

@@ -15,7 +15,7 @@ Alignments and Anchors in RWL display where an element should be in a frame or w
 | Right    | bottom left | bottom | bottom right |
 {% endtab %}
 
-{% tab title="Shoft Name" %}
+{% tab title="Short Name" %}
 | Position | Left | Middle | Right |
 | -------- | ---- | ------ | ----- |
 | Top      | tl   | t      | tr    |
