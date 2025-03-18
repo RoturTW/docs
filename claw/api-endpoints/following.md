@@ -1,13 +1,16 @@
 # /following
 
-### About
+## About
 
 Retrieves a list of users that a specific user is following on Claw.
 
-### Parameters
+## Parameters
 
-#### username
+A list of parameters for this endpoint
+
+| name | the username to fetch the list of users following from |
+| ---- | ------------------------------------------------------ |
+
+## Endpoint
 
 {% embed url="https://claw.rotur.dev/following?username=TargetUser" %}
-
-The username for which to fetch the followed users.
