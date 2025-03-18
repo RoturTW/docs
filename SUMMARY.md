@@ -27,6 +27,7 @@
 ## Assorted APIs
 
 * [avatars.rotur.dev](assorted-apis/avatars.rotur.dev.md)
+* [rotur.dev/auth](assorted-apis/rotur.dev-auth.md)
 
 ## languages
 
