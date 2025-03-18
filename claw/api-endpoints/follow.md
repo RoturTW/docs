@@ -1,19 +1,16 @@
 # /follow
 
-### About
+## About
 
 Follows a specified user on Claw.
 
-### Parameters
+## Parameters
 
-#### auth
+| Parameter | Description |
+| --------- | ----------- |
+| auth      | A required user authentication key |
+| name      | The username of the user to follow |
 
-{% embed url="https://claw.rotur.dev/follow?auth=YOUR_AUTH_KEY&username=TargetUser" %}
+## Endpoint
 
-A required user authentication key.
-
-#### username
-
-{% embed url="https://claw.rotur.dev/follow?auth=YOUR_AUTH_KEY&username=TargetUser" %}
-
-The username of the user to follow.
+{% embed url="https://social.rotur.dev/follow?auth=YOUR_AUTH_KEY&name=TargetUser" %}

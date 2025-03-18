@@ -1,19 +1,16 @@
 # /delete
 
-### About
+## About
 
 Deletes a post on Claw if the authenticated user is the creator.
 
-### Parameters
+## Parameters
 
-#### auth
+| Parameter | Description |
+| --------- | ----------- |
+| auth      | A required user authentication key |
+| id        | The ID of the post to delete |
 
-{% embed url="https://claw.rotur.dev/delete?auth=YOUR_AUTH_KEY&id=POST_ID" %}
+## Endpoint
 
-A required user authentication key.
-
-#### id
-
-{% embed url="https://claw.rotur.dev/delete?auth=YOUR_AUTH_KEY&id=POST_ID" %}
-
-The ID of the post to delete.
+{% embed url="https://social.rotur.dev/delete?auth=YOUR_AUTH_KEY&id=POST_ID" %}

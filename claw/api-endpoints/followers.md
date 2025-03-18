@@ -1,13 +1,15 @@
 # /followers
 
-### About
+## About
 
 Retrieves a list of followers for a specific user on Claw.
 
-### Parameters
+## Parameters
 
-#### username
+| Parameter | Description |
+| --------- | ----------- |
+| name      | The username for which to fetch the followers |
 
-{% embed url="https://claw.rotur.dev/followers?username=TargetUser" %}
+## Endpoint
 
-The username for which to fetch the followers.
+{% embed url="https://social.rotur.dev/followers?name=TargetUser" %}

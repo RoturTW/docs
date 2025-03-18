@@ -1,19 +1,16 @@
 # /repost
 
-### About
+## About
 
-Reposts a post on claw to your profile
+Reposts a post on claw to your profile.
 
+## Parameters
 
+| Parameter | Description |
+| --------- | ----------- |
+| auth      | A required user authentication key |
+| id        | The ID of the post you are reposting |
 
-{% embed url="https://claw.rotur.dev/repost?auth=YOUR_AUTH_KEY&id=post_id" %}
+## Endpoint
 
-Parameters
-
-#### auth
-
-A required user authentication key.
-
-#### post id
-
-The ID of the post you are reposting.
+{% embed url="https://social.rotur.dev/repost?auth=YOUR_AUTH_KEY&id=post_id" %}

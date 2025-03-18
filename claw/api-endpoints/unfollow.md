@@ -1,19 +1,16 @@
 # /unfollow
 
-### About
+## About
 
 Unfollows a specified user on Claw.
 
-### Parameters
+## Parameters
 
-#### auth
+| Parameter | Description |
+| --------- | ----------- |
+| auth      | A required user authentication key |
+| username  | The username of the user to unfollow |
 
-{% embed url="https://claw.rotur.dev/unfollow?auth=YOUR_AUTH_KEY&username=TargetUser" %}
+## Endpoint
 
-A required user authentication key.
-
-#### username
-
-{% embed url="https://claw.rotur.dev/unfollow?auth=YOUR_AUTH_KEY&username=TargetUser" %}
-
-The username of the user to unfollow.
+{% embed url="https://social.rotur.dev/unfollow?auth=YOUR_AUTH_KEY&username=TargetUser" %}

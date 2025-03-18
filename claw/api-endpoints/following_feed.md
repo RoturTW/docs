@@ -1,13 +1,15 @@
-# /following\_feed
+# /following_feed
 
-### About
+## About
 
 Retrieves recent posts from users that the authenticated user is following on Claw.
 
-### Parameters
+## Parameters
 
-#### auth
+| Parameter | Description |
+| --------- | ----------- |
+| auth      | A required user authentication key |
 
-{% embed url="https://claw.rotur.dev/following_feed?auth=YOUR_AUTH_KEY" %}
+## Endpoint
 
-A required user authentication key.
+{% embed url="https://social.rotur.dev/following_feed?auth=YOUR_AUTH_KEY" %}

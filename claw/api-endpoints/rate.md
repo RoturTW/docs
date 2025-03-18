@@ -1,25 +1,17 @@
 # /rate
 
-### About
+## About
 
 Allows a user to like or unlike a post on Claw.
 
-### Parameters
+## Parameters
 
-#### auth
+| Parameter | Description |
+| --------- | ----------- |
+| auth      | A required user authentication key |
+| id        | The ID of the post to rate |
+| rating    | Set to `1` to like the post or `0` to unlike the post |
 
-{% embed url="https://claw.rotur.dev/rate?auth=YOUR_AUTH_KEY&id=POST_ID&rating=1" %}
+## Endpoint
 
-A required user authentication key.
-
-#### id
-
-{% embed url="https://claw.rotur.dev/rate?auth=YOUR_AUTH_KEY&id=POST_ID&rating=1" %}
-
-The ID of the post to rate.
-
-#### rating
-
-{% embed url="https://claw.rotur.dev/rate?auth=YOUR_AUTH_KEY&id=POST_ID&rating=1" %}
-
-Set to `1` to like the post or `0` to unlike the post.
+{% embed url="https://social.rotur.dev/rate?auth=YOUR_AUTH_KEY&id=POST_ID&rating=1" %}

@@ -1,21 +1,17 @@
 # /reply
 
-### About
+## About
 
 Replies to a specific post on Claw.
 
-{% embed url="https://claw.rotur.dev/reply?auth=YOUR_AUTH_KEY&postid=POST_ID&content=Your+reply" %}
+## Parameters
 
-### Parameters
+| Parameter | Description |
+| --------- | ----------- |
+| auth      | A required user authentication key |
+| postid    | The ID of the post you are replying to |
+| content   | The content of your reply |
 
-#### auth
+## Endpoint
 
-A required user authentication key.
-
-#### post id
-
-The ID of the post you are replying to.
-
-#### content
-
-The content of your reply.
+{% embed url="https://social.rotur.dev/reply?auth=YOUR_AUTH_KEY&postid=POST_ID&content=Your+reply" %}
