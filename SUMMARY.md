@@ -58,6 +58,9 @@
   * [/following\_feed](claw/api-endpoints/following_feed.md)
   * [/reply](claw/api-endpoints/reply.md)
   * [/repost](claw/api-endpoints/repost.md)
+  * [/top\_posts](claw/api-endpoints/repost-1.md)
+  * [/search\_posts](claw/api-endpoints/repost-2.md)
+  * [/search\_users](claw/api-endpoints/repost-3.md)
 
 ## The Rotur Extension
 
