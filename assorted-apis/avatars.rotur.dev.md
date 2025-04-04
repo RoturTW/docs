@@ -7,7 +7,7 @@ Rotur avatars are served from avatars.rotur.dev allowing a client to render a mi
 * Images are all stored as jpeg
 * Images are 256x256
 
-### How do I get a profile picturee?
+### How do I get a profile picture?
 
 Simply take the base api url "https://avatars.rotur.dev/" and add the rotur username on the end of it. The username is case insensitive, the same as rotur usernames generally are in all other apis.
 
