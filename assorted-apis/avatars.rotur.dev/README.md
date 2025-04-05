@@ -12,3 +12,4 @@ Rotur avatars are served from avatars.rotur.dev allowing a client to render a mi
 Simply take the base api url "https://avatars.rotur.dev/" and add the rotur username on the end of it. The username is case insensitive, the same as rotur usernames generally are in all other apis.
 
 * https://avatars.rotur.dev/mist
+* https://avatars.rotur.dev/MiSt

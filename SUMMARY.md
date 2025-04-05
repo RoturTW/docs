@@ -26,7 +26,8 @@
 
 ## Assorted APIs
 
-* [avatars.rotur.dev](assorted-apis/avatars.rotur.dev.md)
+* [avatars.rotur.dev](assorted-apis/avatars.rotur.dev/README.md)
+  * [.banners](assorted-apis/avatars.rotur.dev/.banners.md)
 * [rotur.dev/auth](assorted-apis/rotur.dev-auth.md)
 
 ## languages
