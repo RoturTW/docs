@@ -8,7 +8,7 @@ This uses a standard Rotur pmsg (private message) to send an authentication requ
 {
   "cmd": "pmsg",
   "val": {
-    "id": "", // your auth id should be the same as your connected username at this time
+    "id": "", // this should just be an empty string
     "command": "login", // command to send to the rotur server
     "source": "0", // your program's rotur port. 0 is the root
     "client": {
