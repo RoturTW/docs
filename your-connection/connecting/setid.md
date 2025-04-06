@@ -50,3 +50,5 @@ A pre-authorised rotur username is any username that has a 3 letter designation,
 * oriEwZWksbrYDBAxziSZwWejSwK2QMMzGZf
 * r-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf
 * hello-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf
+
+You can connect without the 32 characters, but the designation is required to connect otherwise you will be kicked.
