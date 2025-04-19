@@ -20,11 +20,11 @@ Just put in a github issue to say to add it and ill put it below, please dont us
 * `rtr` - The designation used for rotur projects, such as the example project
 * `ori` - [originOS](https://origin.mistium.com)
 * `nov` - [novaOS](https://adthoughtsglobal.github.io/Nova-OS/)
+* `flf` - [flufiOS](https://github.com/ThePandaDever/Flufi-OS)
 
 ### Partially implemented
 
 * `crl` - [Constellinux](https://github.com/ThatBeaverDev/Constellinux)
-* `flf` - [flufiOS](https://github.com/ThePandaDever/Flufi-OS)
 * `ove` - [OliveOS (formerly NothingOS)](https://github.com/JustN00ne/NothingOS)
 
 ### Not Implemented Into System Yet:
