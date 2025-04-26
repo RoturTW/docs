@@ -62,6 +62,7 @@
   * [/top\_posts](claw/api-endpoints/top_posts.md)
   * [/search\_posts](claw/api-endpoints/search_posts.md)
   * [/search\_users](claw/api-endpoints/search_users.md)
+* [Keys](claw/keys.md)
 
 ## The Rotur Extension
 
