@@ -30,6 +30,10 @@
   * [.banners](assorted-apis/avatars.rotur.dev/.banners.md)
 * [rotur.dev/auth](assorted-apis/rotur.dev-auth.md)
 
+***
+
+* [Keys](keys.md)
+
 ## languages
 
 * [RWL](languages/rwl/README.md)
@@ -62,7 +66,6 @@
   * [/top\_posts](claw/api-endpoints/top_posts.md)
   * [/search\_posts](claw/api-endpoints/search_posts.md)
   * [/search\_users](claw/api-endpoints/search_users.md)
-* [Keys](claw/keys.md)
 
 ## The Rotur Extension
 
