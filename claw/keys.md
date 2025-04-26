@@ -5,6 +5,11 @@
 > **Authentication:**\
 > All routes use the **GET** method.\
 > All required parameters must be passed as **URL query parameters** (after `?` in the URL).
+>
+>
+>
+> **The base url for this api is:**\
+> https://social.rotur.dev/
 
 ***
 
