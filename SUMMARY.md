@@ -41,7 +41,16 @@
     * [Frame](languages/rwl/attributes/frame.md)
     * [Section](languages/rwl/attributes/section.md)
   * [Alignments and Anchors](languages/rwl/alignments-and-anchors.md)
-* [RTR](languages/rtr.md)
+* [RTR](languages/rtr/README.md)
+  * [Basics](languages/rtr/basics.md)
+  * [Structure](languages/rtr/structure.md)
+  * [Functions](languages/rtr/functions/README.md)
+    * [Mathematical Functions](languages/rtr/functions/math.md)
+    * [String Functions](languages/rtr/functions/string.md)
+    * [Array Functions](languages/rtr/functions/array.md)
+    * [Object Functions](languages/rtr/functions/object.md)
+    * [Logical Functions](languages/rtr/functions/logical.md)
+    * [Utility Functions](languages/rtr/functions/utility.md)
 * [RDF](languages/rdf.md)
 
 ## Claw
