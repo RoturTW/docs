@@ -28,9 +28,10 @@ The size of the text, the default text size being 10.
 
 The space between each character in a font
 
-<pre class="language-javascript"><code class="lang-javascript">// the space between each character would be x2 what it would normally be
-<strong>"Wide Text" [spacing=2]
-</strong></code></pre>
+```javascript
+// the space between each character would be x2 what it would normally be
+"Wide Text" [spacing=2]
+```
 
 ### line\_height
 
