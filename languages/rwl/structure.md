@@ -24,7 +24,13 @@ Type of element that contains nested nodes
 
 ```js
 name {
+    content
+}
+```
 
+```javascript
+name [attributes] {
+    content
 }
 ```
 
@@ -39,14 +45,18 @@ frame {}
 
 ## Attribute
 
-A key or flag, usually inside square brackets in an element.
+A key or flag, usually inside square brackets in an element or block.
+
+### Key
 
 ```js
 id = "myID"
 ```
 
+### Flag
+
 ```js
-flex
+Horizontal
 ```
 
 ## Value

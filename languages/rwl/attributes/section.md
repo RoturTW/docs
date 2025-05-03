@@ -6,10 +6,11 @@ description: Attribute list for sections
 
 ## Key-Value Pairs
 
-<pre class="language-javascript"><code class="lang-javascript">section [width = 50%] {
-<strong>    // code
-</strong>}
-</code></pre>
+```javascript
+section [width = 50%] {
+    // code
+}
+```
 
 ```javascript
 section [height = 30%] {
