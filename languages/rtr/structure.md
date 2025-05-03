@@ -1,6 +1,6 @@
 # RTR Structure
 
-RTR (Rotur Template Runtime) is a lightweight scripting language with a simple but powerful structure. This document outlines the core components and structure of RTR code.
+RTR is a lightweight scripting language with a simple but powerful structure. This document outlines the core components and structure of RTR code.
 
 ## Program Structure
 
