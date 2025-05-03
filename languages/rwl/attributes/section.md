@@ -6,19 +6,39 @@ description: Attribute list for sections
 
 ## Key-Value Pairs
 
+### width
+
+determines the width of the section, percentages being a % of the remaining space in the parent [frame](frame.md) and numbers being the pixel size
+
 ```javascript
 section [width = 50%] {
     // code
 }
 ```
 
+### height
+
+determines the height of the section, using the same rules as width
+
 ```javascript
-section [height = 30%] {
+section [height = 100] {
     // code
 }
 ```
 
-overflow
+### size
+
+similar to width and height, but it uses the frame axes.
+
+```javascript
+frame [Horizontal] {
+    section [size=50%] {
+        // uses 50% of the frame horizontally
+    }
+}
+```
+
+### overflow
 
 This describes the behaviour of an element when it is partially or fully outside the section.
 
