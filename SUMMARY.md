@@ -73,6 +73,38 @@
   * [/search\_posts](claw/api-endpoints/search_posts.md)
   * [/search\_users](claw/api-endpoints/search_users.md)
 
+## Web Standard
+
+* [What is this](web-standard/what-is-claw.md)
+
+***
+
+* [Addons / Extensions](addons-extensions/README.md)
+  * [Basic Structure](addons-extensions/basic-structure.md)
+  * [Events](addons-extensions/events/README.md)
+    * [onload](addons-extensions/events/onload.md)
+    * [page\_load](addons-extensions/events/page_load.md)
+    * [page\_focus](addons-extensions/events/page_focus.md)
+  * [API](addons-extensions/api/README.md)
+    * [Classes](addons-extensions/api/classes/README.md)
+      * [Page](addons-extensions/api/classes/page/README.md)
+        * [(static) .new()](addons-extensions/api/classes/page/static-.new.md)
+        * [.getTitle()](addons-extensions/api/classes/page/.gettitle.md)
+      * [URL](addons-extensions/api/classes/url/README.md)
+        * [(static) .new()](addons-extensions/api/classes/url/static-.new.md)
+        * [(static) .parse()](addons-extensions/api/classes/url/static-.parse.md)
+        * [.format()](addons-extensions/api/classes/url/.format.md)
+        * [.getAsyncData()](addons-extensions/api/classes/url/.getasyncdata.md)
+        * [.getFetchUrl()](addons-extensions/api/classes/url/.getfetchurl.md)
+        * [.getTitle()](addons-extensions/api/classes/url/.gettitle.md)
+  * [Commands](addons-extensions/commands/README.md)
+    * [redirect](addons-extensions/commands/redirect.md)
+    * [opentab](addons-extensions/commands/opentab.md)
+  * [Variables](addons-extensions/variables/README.md)
+    * [tab\_info](addons-extensions/variables/tab_info.md)
+    * [page\_width / height](addons-extensions/variables/page_width-height.md)
+    * [scroll\_x / y](addons-extensions/variables/scroll_x-y.md)
+
 ## The Rotur Extension
 
 * [Account Keys](the-rotur-extension/account-keys.md)
