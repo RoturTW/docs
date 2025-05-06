@@ -20,7 +20,8 @@ Using the rotur websocket you can tell the rotur server to transfer credits to a
         "command": "currency_transfer", // the command for the server to perform
         "payload": {
             "recipient": "rotur", // the username you are sending to
-            "amount": 1 // the number of credits to send to them (excluding tax)
+            "amount": 1, // the number of credits to send to them (excluding tax)
+            "note": "hello lmao" // a note for the transaction
         },
         "timestamp": 1739625545700 // when it was sent
     },
