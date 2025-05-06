@@ -6,7 +6,7 @@ Gives the page info on the current scroll of the containing frame
 {% tab title="OSL" %}
 ```javascript
 // example
-goto -scroll_x -scroll_y
+goto scroll_x scroll_y
 ```
 {% endtab %}
 {% endtabs %}
