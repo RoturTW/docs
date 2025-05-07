@@ -2,6 +2,7 @@
 
 ## OUTDATED PLEASE USE&#x20;
 
+[get-user-data.md](../get-user-data.md "mention")
 
 
 Logging into rotur is pretty simple. Ensure you meet the requirements for authentication in [.](./ "mention")
