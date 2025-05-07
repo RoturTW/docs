@@ -1,5 +1,9 @@
 # Login
 
+## OUTDATED PLEASE USE&#x20;
+
+
+
 Logging into rotur is pretty simple. Ensure you meet the requirements for authentication in [.](./ "mention")
 
 This uses a standard Rotur pmsg (private message) to send an authentication request to the Rotur auth server.

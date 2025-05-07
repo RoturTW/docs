@@ -10,11 +10,13 @@
   * [SetID](your-connection/connecting/setid.md)
   * [Link](your-connection/connecting/link.md)
 * [Authentication](your-connection/authentication/README.md)
+  * [Get User Data](your-connection/authentication/get-user-data.md)
   * [Login](your-connection/authentication/login.md)
 * [Rotur Designations](your-connection/rotur-designations.md)
 * [Websocket Commands](your-connection/websocket-commands/README.md)
   * [Global Message (gmsg)](your-connection/websocket-commands/global-message-gmsg.md)
   * [Private Message (pmsg)](your-connection/websocket-commands/private-message-pmsg.md)
+  * [Login to rotur (auth)](your-connection/websocket-commands/login-to-rotur-auth.md)
 
 ## My Account
 
@@ -51,6 +53,8 @@
     * [Object Functions](languages/rtr/functions/object.md)
     * [Logical Functions](languages/rtr/functions/logical.md)
     * [Utility Functions](languages/rtr/functions/utility.md)
+  * [Events](languages/rtr/events.md)
+  * [Examples](languages/rtr/examples.md)
 * [RDF](languages/rdf.md)
 
 ## Claw
