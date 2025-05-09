@@ -1,7 +1,5 @@
 # Keys
 
-## Key Management API
-
 > **Authentication:**\
 > All routes use the **GET** method.\
 > All required parameters must be passed as **URL query parameters** (after `?` in the URL).
