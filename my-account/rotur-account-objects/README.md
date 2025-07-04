@@ -10,7 +10,7 @@ A Rotur account object is a simple json object of keys and values.
 
 ## Rotur Keys
 
-### Static (Read Only)
+### Read Only
 
 ```
 username
@@ -66,7 +66,7 @@ sys.used_systems
   eg. ["originOS", "constellinux"]
 ```
 
-### Dynamic (Writable)
+### Writable
 
 ```
 private
