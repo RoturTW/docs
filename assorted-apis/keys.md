@@ -105,13 +105,12 @@ Revoke a user's access to a key.
 **Query Parameters:**
 
 * `auth` — your rotur user token (required)
-* `username` — the username to remove (required)
-* `key` — the key being revoked (required)
+* `user` — the username to remove (required)
 
 **Example:**
 
 ```http
-GET /keys/revoke/1234?auth=YOUR_TOKEN&username=misty&key=KEY_ID
+GET /keys/revoke/1234?auth=YOUR_TOKEN&user=misty
 ```
 
 ***
@@ -155,7 +154,7 @@ Update the data associated with a key.
 **Example:**
 
 ```http
-GET /keys/update/1234?auth=YOUR_TOKEN&key=KEY_ID&data=newdata
+GET /keys/update/1234?auth=YOUR_TOKEN&data=newdata
 ```
 
 ***
