@@ -154,7 +154,7 @@ Update the data associated with a key.
 **Example:**
 
 ```http
-GET /keys/update/1234?auth=YOUR_TOKEN&data=newdata
+GET /keys/update/1234?auth=YOUR_TOKEN&key=price&data=5
 ```
 
 ***
