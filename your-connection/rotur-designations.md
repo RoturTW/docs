@@ -29,4 +29,4 @@ Just put in a github issue to say to add it and ill put it below, please dont us
 
 ### Not Implemented Into System Yet:
 
-* `kyr` - kryOS
+* `kyr` - kyrOS
