@@ -1,16 +1,19 @@
-## Get Rotur User Data
+# Get User Data
 
 To fetch a user's data from Rotur, hit the `/get_user` endpoint:
 
 > **Note:** The `password` needs to be an **MD5 hash**, not plain text.
 
----
+***
 
-### Example (JavaScript)
+## Example (JavaScript)
 
 ```js
 const username = "your_username";
 const password = "md5_hashed_password"; // hash it before sending
+
+// you can also use ?auth=token with a rotur token
+// if you dont have the username and password
 
 fetch(`https://social.rotur.dev/get_user?username=${username}&password=${password}`)
   .then(res => res.json())
@@ -27,18 +30,14 @@ fetch(`https://social.rotur.dev/get_user?username=${username}&password=${passwor
   });
 ```
 
----
+***
 
-The response (`data`) is a full **Rotur account object**.
-Details on what’s inside:
-[rotur-account-objects](../../my-account/rotur-account-objects/)
+The response (`data`) is a full **Rotur account object**. Details on what’s inside: [rotur-account-objects](../../my-account/rotur-account-objects/)
 
----
+***
 
-### Logging in via WebSocket
+## Logging in via WebSocket
 
-Once you have the user data, you can auth with the WebSocket server using the `auth` command.
-This is the recommended way to log in — way faster than doing it through HTTP.
+Once you have the user data, you can auth with the WebSocket server using the `auth` command. This is the recommended way to log in — way faster than doing it through HTTP.
 
-Docs for that here:
-[login-to-rotur-auth.md](../websocket-commands/login-to-rotur-auth.md)
+Docs for that here: [login-to-rotur-auth.md](../websocket-commands/login-to-rotur-auth.md)

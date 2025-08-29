@@ -33,6 +33,7 @@
   * [.banners](assorted-apis/avatars.rotur.dev/.banners.md)
 * [rotur.dev/auth](assorted-apis/rotur.dev-auth.md)
 * [Keys](assorted-apis/keys.md)
+* [Linking](assorted-apis/linking.md)
 
 ## languages
 
