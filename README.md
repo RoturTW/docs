@@ -14,7 +14,7 @@ Rotur's current developers are:
 
 |            ![](https://avatars.rotur.dev/mist)            |           ![](https://avatars.rotur.dev/flufi)            |               ![](https://avatars.rotur.dev/b1j2754)              |
 | :-------------------------------------------------------: | :-------------------------------------------------------: | :---------------------------------------------------------------: |
-|               [Mistium](https://mistium.com)              |         [Flufi](https://github.com/ThePandaDever)         |                 [Layz](https://github.com/B1j2754)                |
+|               [Mistium](https://mistium.com)              |         [Flufi](https://github.com/ThePandaDever)         |                [B1j2754](https://github.com/B1j2754)              |
 
 ***
 
