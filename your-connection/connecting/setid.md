@@ -12,15 +12,16 @@ This command is also largely unchanged in comparison to the cl4 standard, except
 
 You should then recieve these packets from the server
 
-<pre class="language-javascript"><code class="lang-javascript">{
+```javascript
+{
   "cmd": "ulist",
-<strong>  "mode": "set", // overwrite your local userlist
-</strong><strong>  "val": [ // an array of user objects. These may be updated later to contain more info
-</strong><strong>    {"username": "ori-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf"}
-</strong><strong>  ],
-</strong><strong>  "room": "default"
-</strong><strong>}
-</strong></code></pre>
+  "mode": "set", // overwrite your local userlist
+  "val": [ // an array of user objects. These may be updated later to contain more info
+    {"username": "ori-EwZWksbrYDBAxziSZwWejSwK2QMMzGZf"}
+  ],
+  "room": "default"
+}
+```
 
 ```javascript
 {
