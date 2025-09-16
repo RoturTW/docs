@@ -16,7 +16,8 @@ Rotur's main room is "roturTW" where the auth server resides, but after you have
 
 You should then recieve these messages from rotur
 
-<pre class="language-javascript"><code class="lang-javascript">{
+```javascript
+{
   "cmd": "ulist",
   "mode": "set",
   "val": [ // the current room members full of user objects
@@ -26,9 +27,9 @@ You should then recieve these messages from rotur
     {user object},
     {"username": "sys-rotur"} // the server connection
  }
-<strong> "room": "roturTW"
-</strong><strong>}
-</strong></code></pre>
+ "room": "roturTW"
+}
+```
 
 ```javascript
 {
