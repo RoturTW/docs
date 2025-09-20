@@ -10,8 +10,6 @@ A node used to define objects, that can contain optional attributes or nested el
 "hi" [id = "myID"]
 ```
 
-Usually, elements that are not blocks have their type (e.g. frame in frame {}) as a value.
-
 Elements can also have a number of attributes.
 
 ```js
@@ -43,7 +41,7 @@ One or more elements as a list
 frame {}
 ```
 
-## Attribute
+## Attributes
 
 A key or flag, usually inside square brackets in an element or block.
 
