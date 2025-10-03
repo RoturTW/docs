@@ -16,10 +16,13 @@ Both websocket urls lead to the same server so if you connect to ws.rotur.dev an
 
 The first step is simply to open a websocket connection with rotur!
 
-<pre class="language-javascript" data-title="rotur.js" data-line-numbers data-full-width="false"><code class="lang-javascript"><strong>my_rotur = new WebSocket("wss://ws.rotur.dev")
-</strong><strong>
-</strong><strong>my_rotur.onopen = () => {
-</strong><strong>  console.log("Connected!")
-</strong><strong>  // your logic for handling packets goes here
-</strong><strong>}
-</strong></code></pre>
+{% code title="rotur.js" lineNumbers="true" fullWidth="false" %}
+```javascript
+my_rotur = new WebSocket("wss://ws.rotur.dev")
+
+my_rotur.onopen = () => {
+  console.log("Connected!")
+  // your logic for handling packets goes here
+}
+```
+{% endcode %}

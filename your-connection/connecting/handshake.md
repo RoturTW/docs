@@ -20,11 +20,12 @@ The handshake is unmodified from cl4, using the same format and same inputs. Thi
 
 Then the server should return a set of packets listed below. In the same order
 
-<pre class="language-javascript"><code class="lang-javascript">{
+```javascript
+{
   "cmd": "client_ip",
-<strong>  "val": "" // your ip
-</strong><strong>}
-</strong></code></pre>
+  "val": "" // your ip
+}
+```
 
 ```javascript
 {
