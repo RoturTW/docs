@@ -12,6 +12,8 @@ If you are making a website that connects to rotur, your users will often trust 
 
 The traditional approach where you redirect your page to the auth endpoint and the user returns with a token.
 
+You should redirect with https://rotur.dev/auth?return_to=url to make sure it goes back to your original page
+
 #### How do i get a rotur token using this?
 
 Have a look at the example page here:
