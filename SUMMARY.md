@@ -25,6 +25,7 @@
 * [Requesting my ofsf storage](my-account/requesting-my-ofsf-storage.md)
 * [Rotur Badges](my-account/rotur-badges.md)
 * [Transactions and Taxes](my-account/transactions-and-taxes.md)
+* [Bio Template Strings](my-account/bio-templates.md)
 
 ## Assorted APIs
 
