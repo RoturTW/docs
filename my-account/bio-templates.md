@@ -31,7 +31,7 @@ Hi, I'm Sophie and I currently have 1234 credits!
 ### Key points:
 
 * Only safe keys are processed; unknown keys are replaced with an empty string.
-* You cannot chain keys like `sys.currency` to access nested data, `sys.currency` will just be the name of the key.
+* You cannot chain keys like `theme.text` to access nested data. (Note: `sys.*` keys are items of root object and are not nested)
 * No JavaScript or client-side processing is needed, all handling happens server-side.
 
 ## Who can see these values?
