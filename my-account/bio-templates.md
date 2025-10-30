@@ -44,7 +44,7 @@ There are no hard limits on how many keys you can use in your bio. However, extr
 
 ## What tiers get Bio Templates?
 
-Any Patreon tier → includes Bio Templates
+Any Patreon tier → includes Bio Templates<br>
 Free accounts → not available
 
 Subscribe [here](https://www.patreon.com/c/mistium/membership) to unlock this feature.
