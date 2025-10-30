@@ -31,7 +31,7 @@ Hi, I'm Sophie and I currently have 1234 credits!
 ### Key points:
 
 * Only safe keys are processed; unknown keys are replaced with an empty string.
-* You can chain keys like `sys.currency` to access nested data if available.
+* You cannot chain keys like `sys.currency` to access nested data, `sys.currency` will just be the name of the key.
 * No JavaScript or client-side processing is needed, all handling happens server-side.
 
 ## Who can see these values?
