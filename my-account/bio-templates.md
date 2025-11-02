@@ -2,7 +2,7 @@
 
 Rotur Bio Templates let you dynamically display information from your Rotur account directly in your user bio. This is perfect for showing things like your total credits, email, or other safe account info without manually updating your bio every time something changes.
 
-This is a Patreon-only feature. Subscribing to [my Patreon](https://www.patreon.com/c/mistium/membership) at any tier gives you access to this system. You can use the syntax `{{ user key_name }}` in your bio to include the value of that key from your profile.
+This is a paid feature. Subscribing to [my Ko-fi](https://ko-fi.com/mistium/tiers) at any tier gives you access to this system. You can use the syntax `{{ user key_name }}` in your bio to include the value of that key from your profile.
 
 Some examples include:
 
@@ -14,7 +14,7 @@ Only safe and primitive values (strings, numbers, booleans) are allowed. Objects
 
 ## Setup
 
-Once you have a Patreon subscription, you can edit your bio in your profile settings. Anywhere you include `{{ user key_name }}`, the server will replace it with the actual value from your account whenever someone views your profile.
+Once you have a subscription, you can edit your bio in your profile settings. Anywhere you include `{{ user key_name }}`, the server will replace it with the actual value from your account whenever someone views your profile.
 
 For example, a bio like:
 
@@ -44,7 +44,7 @@ There are no hard limits on how many keys you can use in your bio. However, extr
 
 ## What tiers get Bio Templates?
 
-Any Patreon tier → includes Bio Templates<br>
+Any tier → includes Bio Templates<br>
 Free accounts → not available
 
-Subscribe [here](https://www.patreon.com/c/mistium/membership) to unlock this feature.
+Subscribe [here](https://ko-fi.com/mistium/tiers) to unlock this feature.
