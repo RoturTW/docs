@@ -2,13 +2,13 @@
 
 Rotur Shares let you instantly publish files from your OriginOS drive to the web - ideal for hosting static sites, sharing images, or distributing small downloads.
 
-They are a patreon only feature used in originOS, subscribing to [my patreon](https://www.patreon.com/c/mistium/membership) at originDrive or originPro gives you access to create a "share" folder in your user folder within originOS. Any file that you drag into this `~/share` folder will be immediately available at the url `https://share.rotur.dev/<username>/<filename>`
+They are a paid only feature used in originOS, subscribing [here](https://ko-fi.com/mistium/tiers) at originDrive or originPro gives you access to create a "share" folder in your user folder within originOS. Any file that you drag into this `~/share` folder will be immediately available at the url `https://share.rotur.dev/<username>/<filename>`
 
 This can be used to quickly share a file from your origin drive and host it online, this also works with websites and other file types if you want static and fast file delivery. Obviously your hosted files can't excede your file limits.
 
 ## Setup
 
-When you load into origin, you should check your file size limits in settings > system > storage, if it shows more than 10mb then you have access to share.
+When you load into origin and open settings, if it says your account is originDrive or originPro, you should have access to thus feature
 If you don't, dm me (@mistium on discord) after purchasing a patreon tier with rotur shares and ill increase your file size limits and give access to rotur shares.
 
 If you dont have a share folder when you open files, you can create one and it will work just fine.
@@ -36,4 +36,4 @@ There are no official limits but if you start spam requesting or using the servi
 originDrive or higher → includes Rotur Shares<br>
 Free accounts → not available
 
-Subscribe [here](https://www.patreon.com/c/mistium/membership)
+Subscribe [here](https://ko-fi.com/mistium/tiers)
