@@ -14,7 +14,7 @@ rMail operates on a packet-based communication system where clients send command
 
 All requests to the rMail system use the following packet format:
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -22,9 +22,6 @@ All requests to the rMail system use the following packet format:
     "command": "omail_command",
     "payload": {
       // Command-specific payload data
-    },
-    "origin": {
-      "rotur": "username"
     }
   }
 }
@@ -37,8 +34,6 @@ Key components:
   * `source`: Identifier of the requesting client
   * `command`: The specific rMail operation to perform
   * `payload`: Data relevant to the command (varies by command type)
-  * `origin`: Contains authentication information
-    * `rotur`: Username of the sender (will be converted to lowercase)
 
 ### Available Commands
 
@@ -48,22 +43,19 @@ Retrieves summary information about all rMails for the authenticated user.
 
 **Request:**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
     "source": "client_identifier",
     "command": "omail_getinfo",
-    "origin": {
-      "rotur": "username"
-    }
   }
 }
 ```
 
 **Response:**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -94,7 +86,7 @@ Sends a new rMail to another user.
 
 **Request:**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -104,9 +96,6 @@ Sends a new rMail to another user.
       "recipient": "recipient_username",
       "title": "rMail Subject",
       "body": "rMail content goes here..."
-    },
-    "origin": {
-      "rotur": "username"
     }
   }
 }
@@ -114,7 +103,7 @@ Sends a new rMail to another user.
 
 **Response (Success):**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -133,7 +122,7 @@ Sends a new rMail to another user.
 
 **Response (Rate Limited):**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -156,39 +145,33 @@ Deletes a specific rMail or all rMails for the authenticated user.
 
 **Request (Delete Specific rMail):**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
     "source": "client_identifier",
     "command": "omail_delete",
-    "payload": 1, // Index of rMail to delete, this is 1 indexed
-    "origin": {
-      "rotur": "username"
-    }
+    "payload": 1 // Index of rMail to delete, this is 1 indexed
   }
 }
 ```
 
 **Request (Delete All rMails):**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
     "source": "client_identifier",
     "command": "omail_delete",
-    "payload": "all",
-    "origin": {
-      "rotur": "username"
-    }
+    "payload": "all"
   }
 }
 ```
 
 **Response:**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -216,17 +199,14 @@ Retrieves the total number of rMails for the authenticated user.
   "cmd": "pmsg",
   "val": {
     "source": "client_identifier",
-    "command": "omail_total",
-    "origin": {
-      "rotur": "username"
-    }
+    "command": "omail_total"
   }
 }
 ```
 
 **Response:**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -249,23 +229,20 @@ Retrieves the full content of a specific rMail by its index.
 
 **Request:**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
     "source": "client_identifier",
     "command": "omail_getid",
-    "payload": 1, // 1-based index of the rMail to retrieve
-    "origin": {
-      "rotur": "username"
-    }
+    "payload": 1 // 1-based index of the rMail to retrieve
   }
 }
 ```
 
 **Response:**
 
-```json
+```js
 {
   "cmd": "pmsg",
   "val": {
@@ -307,7 +284,7 @@ The rMail system has several built-in limitations:
 
 rMails are stored in the following structure:
 
-```json
+```js
 {
   "body": "Content of the rMail",
   "info": {
@@ -317,88 +294,6 @@ rMails are stored in the following structure:
     "from": "sender_username"
   }
 }
-```
-
-### Implementation Details
-
-#### Storage Files
-
-The rMail system uses two main storage files:
-
-1. **rmails.json**: Stores all rMail data, organized by username
-2. **rmail\_ratelimits.json**: Tracks the last time each user sent a rMail for rate limiting
-
-#### rMail Indexing
-
-* New rMails are inserted at the beginning of a user's rMail list (index 0)
-* Both sender and recipient receive a copy of each rMail
-* rMail IDs used in client interfaces are 1-based, but internally they're 0-based
-
-### Example Usage Scenarios
-
-#### Checking for New rMails
-
-```javascript
-// First, get the total rMail count
-sendPacket({
-  "cmd": "pmsg",
-  "val": {
-    "source": "my_client",
-    "command": "omail_total",
-    "origin": {
-      "rotur": "myusername"
-    }
-  }
-});
-
-// Then get the rMail info
-sendPacket({
-  "cmd": "pmsg",
-  "val": {
-    "source": "my_client",
-    "command": "omail_getinfo",
-    "origin": {
-      "rotur": "myusername"
-    }
-  }
-});
-```
-
-#### Sending a rMail
-
-```javascript
-sendPacket({
-  "cmd": "pmsg",
-  "val": {
-    "source": "my_client",
-    "command": "omail_send",
-    "payload": {
-      "recipient": "friend",
-      "title": "Hello there",
-      "body": "This is a test rMail sent via the rMail system!"
-    },
-    "origin": {
-      "rotur": "myusername"
-    }
-  }
-});
-```
-
-#### Reading a Specific rMail
-
-```javascript
-// Get rMail with ID 1 (the most recent rMail)
-sendPacket({
-  "cmd": "pmsg",
-  "val": {
-    "source": "my_client",
-    "command": "omail_getid",
-    "payload": 1,
-    "origin": {
-      "rotur": "myusername"
-    }
-  }
-});
 ```
 
 ### Error Handling
