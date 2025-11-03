@@ -13,3 +13,11 @@ Simply take the base api url "https://avatars.rotur.dev/" and add the rotur user
 
 * https://avatars.rotur.dev/mist
 * https://avatars.rotur.dev/MiSt
+
+## Query params
+
+- **size**: https://avatars.rotur.dev/mist?s=50
+  - lets you get a specific size of a user's profile picture
+ 
+- **radius**: https://avatars.rotur.dev/mist?radius=128
+  - lets you request a rounded version of a profile picture without needing to do client side processing
