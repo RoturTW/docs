@@ -4,11 +4,11 @@ RTR provides several built-in functions for string manipulation and operations.
 
 ## join
 
-Concatenates multiple strings together, with an optional separator.
+Concatenates multiple strings together.
 
 ```js
-join("Hello", " ", "World");  /* Returns "Hello World" */
-join("a", "b", "c", "-");     /* Returns "a-b-c" */
+join("Hello ", "World");  /* Returns "Hello World" */
+join("a", "b", "c");     /* Returns "abc" */
 ```
 
 ## split
@@ -45,4 +45,4 @@ Returns the length of a string.
 ```js
 length("Hello");              /* Returns 5 */
 length("");                   /* Returns 0 */
-``` 
+```
