@@ -27,6 +27,7 @@
 * [Transactions and Taxes](my-account/transactions-and-taxes.md)
 * [Bio Template Strings](my-account/bio-templates.md)
 * [Friend Notes](my-account/friend-notes.md)
+* [Earn Credits](my-account/earn-credits.md)
 
 ## Assorted APIs
 
