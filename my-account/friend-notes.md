@@ -1,6 +1,6 @@
 # Friend Notes
 
-Friend Notes let you privately store small bits of information about other users on Rotur — similar to Discord-style notes. These notes are **visible only to you**, never to the other user, and can be used for reminders, context, or anything else you want to remember about someone.
+Friend Notes let you privately store small bits of information about other users on Rotur, similar to Discord-style notes. These notes are **visible only to you**, never to the other user, and can be used for reminders, context, or anything else you want to remember about someone.
 
 This feature is **paid**, available to anyone subscribed to any tier on [Ko-fi](https://ko-fi.com/mistium/tiers).
 
@@ -65,14 +65,14 @@ Friend Notes are **100% private**:
 ## Limits
 
 * Maximum note length: 300 characters.
-* Notes must be plain text — no formatting or markup is interpreted.
+* Notes must be plain text, no formatting or markup is interpreted.
 * Each user can have one note entry; rewriting the note replaces the previous text.
 
 ---
 
 ## Who Can Use Friend Notes?
 
-Any paid subscription tier → includes Friend Notes
+Any paid subscription tier → includes Friend Notes<br>
 Free accounts → not available
 
 Subscribe here to unlock this feature:
