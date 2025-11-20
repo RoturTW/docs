@@ -6,6 +6,9 @@ Rotur avatars are served from avatars.rotur.dev allowing a client to render a mi
 
 * Images are all stored as jpeg
 * Images are 256x256
+* Patreon supporters get 512x512 image uploads
+* Images are cached for performance
+* If the user has not set a profile picture, a default image is returned
 
 ### How do I get a profile picture?
 
@@ -14,10 +17,13 @@ Simply take the base api url "https://avatars.rotur.dev/" and add the rotur user
 * https://avatars.rotur.dev/mist
 * https://avatars.rotur.dev/MiSt
 
-## Query params
+### What if the user doesn't have a profile picture?
 
-- **size**: https://avatars.rotur.dev/mist?s=50
-  - lets you get a specific size of a user's profile picture
- 
-- **radius**: https://avatars.rotur.dev/mist?radius=128
-  - lets you request a rounded version of a profile picture without needing to do client side processing
+If the user does not have a profile picture set, a default image will be returned. This image is a simple silhouette of a person on a colored background.
+
+### Query Parameters
+
+You can add the following query parameters to customize the avatar:
+
+* `s`: Specify the size of the avatar. Default is 256. Example: `?s=128`
+* `radius`: Specify the border radius of the avatar. Default is 0 (square). Example: `?radius=128` for a circular avatar.
