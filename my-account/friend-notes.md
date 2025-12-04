@@ -18,7 +18,7 @@ To update the note for a specific user, send a request to:
 POST https://api.rotur.dev/me/note/{username}?auth={token}&note={encoded_note}
 ```
 
-### Deleting Notes
+### Deleting Notes
 
 To delete a note for a specific user, send a request to:
 
