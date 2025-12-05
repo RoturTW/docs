@@ -1,6 +1,6 @@
 ## OUTDATED PLEASE USE&#x20;
 
-[get-user-data.md](../get-user-data.md "mention")
+[get-user-data.md](./get-user-data.md "mention")
 
 # Login
 
