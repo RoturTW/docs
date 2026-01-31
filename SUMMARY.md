@@ -81,7 +81,6 @@
   * [/repost](claw/api-endpoints/repost.md)
   * [/top\_posts](claw/api-endpoints/top_posts.md)
   * [/search\_posts](claw/api-endpoints/search_posts.md)
-  * [/search\_users](claw/api-endpoints/search_users.md)
 
 ## Web Standard
 
