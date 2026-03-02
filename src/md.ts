@@ -1,8 +1,6 @@
 import { highlight, tokenTypeToCssClass } from "./highlighter";
 import { icons } from "./icons";
-import { text } from "./md_test";
 import { generateList, generateTable, isListMarker, isTableRow, removeIndent } from "./md_utils";
-import { getItemFromPath, getPageFromItem } from "./sidebar";
 
 function tokenise(text: string): string[] {
     const tkns = text.match(/https?:\/\/[^\s)]+|___|__|_| *-+:\|| *-+ *\||-+|---|\*\*\*|__|!?\[[^\]]+\]\(https?:\/\/[^\s)]+\)|~~|\^|~|\*\*|#|>\s*\[!\w+\]|>| +|```|`|\d+\.|\.+|[a-zA-Z.]+|\n|[a-zA-Z]+|./gm);
@@ -10,7 +8,7 @@ function tokenise(text: string): string[] {
     return tkns as string[];
 }
 
-function generateFromText(text: string, container: HTMLElement): HTMLDivElement {
+export function generateFromText(text: string, container: HTMLElement): HTMLDivElement {
     const start = performance.now();
     const elem = generate(tokenise(text), container);
     console.log(`generated md in ${performance.now() - start}ms`);
@@ -159,7 +157,7 @@ function generateElement(tokens: string[], parent: HTMLElement) {
         }
 
         elem.appendChild(content_elem);
-        
+
         parent.appendChild(elem);
         return;
     }
@@ -315,14 +313,4 @@ export function generateTextElementPart(tokens: string[], parent: HTMLElement) {
     }
 }
 
-export function generatePage(path: string[]) {
-    const item = getItemFromPath(path);
-    const page = getPageFromItem(item);
-
-    const container = document.getElementById("content-container")!;
-    container.innerText = "";
-
-    generateFromText(page.content, container);
-}
-
-generateFromText(text, document.getElementById("content-container")!);
+//generateFromText(text, document.getElementById("content-container")!);

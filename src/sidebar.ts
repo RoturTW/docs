@@ -1,27 +1,24 @@
-import { generatePage } from "./md";
 import { text } from "./md_test";
+import { generatePage, type Page } from "./page";
 
 export type SidebarItem = {
     type: "page",
     content: string,
     children?: Record<string, SidebarItem>,
+    description?: string,
 
     open?: boolean,
+    category_path?: string[]
 } | {
     type: "dir",
     children: Record<string, SidebarItem>,
+    description?: string,
 
     open?: boolean,
-};
-
-export type SidebarPage = {
-    content: string
-} & ({
-    type: "page",
+    category_path?: string[]
 } | {
-    type: "dir",
-    children: Record<string, SidebarPage>
-});
+    type: "category"
+};
 
 const pages: Record<string, SidebarItem> = {
     sigma: {
@@ -38,6 +35,7 @@ const pages: Record<string, SidebarItem> = {
             }
         }
     },
+    silly: { type: "category" },
     fr: {
         type: "dir",
         children: {
@@ -70,23 +68,32 @@ const pages: Record<string, SidebarItem> = {
     },
 };
 
-let selected_elem: HTMLElement | null = null;
+type GenerationContext = {
+    current_category?: string
+};
 
-function generateItems(parent: HTMLElement, items: Record<string, SidebarItem>, path: string[]) {
+let selected_elem: HTMLElement | null = null;
+let selected_path: string[] = [];
+
+function generateItems(parent: HTMLElement, items: Record<string, SidebarItem>, path: string[], ctx: GenerationContext = {}) {
     const elem = document.createElement("div");
-    elem.className = `sidebar-list`
+    elem.className = `sidebar-list`;
+
     const item_entries = Object.entries(items);
     for (let index = 0; index < item_entries.length; index++) {
-        generateItem(elem, ...item_entries[index], path);
+        generateItem(elem, ...item_entries[index], path, ctx);
     }
+
     parent.appendChild(elem);
 }
 
-function generateItem(parent: HTMLElement, name: string, item: SidebarItem, path: string[]) {
+function generateItem(parent: HTMLElement, name: string, item: SidebarItem, path: string[], ctx: GenerationContext) {
     let click_button: HTMLButtonElement | null = null;
-    let elem: HTMLElement;
+    let elem: HTMLElement | null = null;
     switch (item.type) {
         case "page": {
+            item.category_path = [...(ctx.current_category != null ? [ctx.current_category] : []), ...path];
+
             const button = document.createElement("button");
             button.className = "page";
             click_button = button;
@@ -112,6 +119,8 @@ function generateItem(parent: HTMLElement, name: string, item: SidebarItem, path
             break;
         }
         case "dir": {
+            item.category_path = [...(ctx.current_category != null ? [ctx.current_category] : []), ...path];
+
             const button = document.createElement("button");
             click_button = button;
             const txt = document.createElement("span");
@@ -128,27 +137,39 @@ function generateItem(parent: HTMLElement, name: string, item: SidebarItem, path
             
             parent.appendChild(holder);
             elem = holder;
+            break;
+        }
+        case "category": {
+            const elem = document.createElement("h4");
+            elem.textContent = name.toUpperCase();
+            parent.appendChild(elem);
+            ctx.current_category = name;
+            break
         }
     }
 
+    console.log(item);
+
+    if (elem)
+        elem.id = `sidebar-select-elem-${[...path, name].join("/")}`;
+
     if (click_button) {
         click_button.addEventListener("click", () => {
-            generatePage([...path, name]);
-            if (selected_elem)
-                selected_elem.classList.remove("selected");
-            selected_elem = elem;
-            selected_elem.classList.add("selected");
+            gotoPage([...path, name]);
         });
     }
 }
 
 export function getItemFromPath(path: string[]): SidebarItem {
-    let name = path.pop();
+    let name = path[path.length - 1];
     if (!name)
         throw `invalid path '${path}'`;
     let cur = pages;
-    for (let i = 0; i < path.length; i++) {
-        cur = cur[path[i]].children!;
+    for (let i = 0; i < path.length - 1; i++) {
+        const item = cur[path[i]];
+        if (!("children" in item))
+            throw `invalid path '${path}'`;
+        cur = item.children!;
         if (!cur)
             throw `invalid path '${path}'`;
     }
@@ -160,20 +181,39 @@ export function getItemFromPath(path: string[]): SidebarItem {
     return page;
 }
 
-export function getPageFromItem(item: SidebarItem): SidebarPage {
+export function getPageFromItem(item: SidebarItem): Page {
     switch (item.type) {
         case "page":
             return {
-                type: "page",
-                content: item.content
+                type: "md",
+                content: item.content,
+                description: item.description,
+                category_path: item.category_path
             };
         case "dir":
             return {
                 type: "dir",
-                content: "blehh (need to make an md thing for dirs)",
-                children: Object.fromEntries(Object.entries(item.children).map(e => [e[0], getPageFromItem(e[1])]))
+                children: Object.fromEntries(Object.entries(item.children).map(e => [e[0], getPageFromItem(e[1])])),
+                description: item.description,
+                category_path: item.category_path
             };
+        case "category":
+            throw `cannot get page of category`;
     }
+}
+
+export function gotoPage(path: string[]) {
+    selected_path = path;
+    generatePage(selected_path);
+    if (selected_elem)
+        selected_elem.classList.remove("selected");
+    selected_elem = document.getElementById(`sidebar-select-elem-${path.join("/")}`)!;
+    if (selected_elem)
+        selected_elem.classList.add("selected");
+}
+
+function init() {
+    gotoPage(["sigma"]);
 }
 
 const start = performance.now();
@@ -181,3 +221,5 @@ const start = performance.now();
 generateItems(document.getElementById("sidebar")!, pages, []);
 
 console.log(`generated sidebar in ${performance.now() - start}ms`);
+
+init();
