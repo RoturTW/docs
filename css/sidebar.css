@@ -1,0 +1,88 @@
+
+#sidebar {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+
+    div.page,
+    div.dir {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+    }
+    div.page > div,
+    div.dir > div {
+        position: relative;
+
+        padding-left: 20px;
+        padding-bottom: 5px;
+        overflow: hidden;
+        transition: max-height 1s ease-in-out;
+    }
+    div.page.open > div {
+        max-height: 500px;
+    }
+
+    button {
+        position: relative;
+        height: 35px;
+        box-sizing: border-box;
+
+        text-align: left;
+        padding-left: 15px;
+
+        background-color: transparent;
+        border: none;
+        border-radius: 0 5px 5px 0;
+
+        cursor: pointer;
+
+        transition: all .1s;
+    }
+    button:hover {
+        background-color: var(--prim);
+    }
+    button > span {
+        font-size: 16px;
+    }
+
+    button.page::before,
+    div.page::before,
+    div.dir > div::before,
+    div.dir > button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: var(--prim);
+        
+        transition: all .1s;
+    }
+    button.page.selected::before,
+    div.page.selected > button::before,
+    div.dir.selected > button::before {
+        background-color: var(--accent);
+        width: 3px;
+    }
+
+    button > span {
+        color: var(--text);
+        font-family: "Poppins", sans-serif;
+
+        transition: color .2s;
+    }
+    button.selected > span,
+    div.page.selected > button > span,
+    div.dir.selected > button > span {
+        color: var(--accent);
+    }
+}

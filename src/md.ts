@@ -2,11 +2,19 @@ import { highlight, tokenTypeToCssClass } from "./highlighter";
 import { icons } from "./icons";
 import { text } from "./md_test";
 import { generateList, generateTable, isListMarker, isTableRow, removeIndent } from "./md_utils";
+import { getItemFromPath, getPageFromItem } from "./sidebar";
 
 function tokenise(text: string): string[] {
     const tkns = text.match(/https?:\/\/[^\s)]+|___|__|_| *-+:\|| *-+ *\||-+|---|\*\*\*|__|!?\[[^\]]+\]\(https?:\/\/[^\s)]+\)|~~|\^|~|\*\*|#|>\s*\[!\w+\]|>| +|```|`|\d+\.|\.+|[a-zA-Z.]+|\n|[a-zA-Z]+|./gm);
     
     return tkns as string[];
+}
+
+function generateFromText(text: string, container: HTMLElement): HTMLDivElement {
+    const start = performance.now();
+    const elem = generate(tokenise(text), container);
+    console.log(`generated md in ${performance.now() - start}ms`);
+    return elem;
 }
 
 function generate(tokens: string[], parent: HTMLElement): HTMLDivElement {
@@ -123,6 +131,13 @@ function generateElement(tokens: string[], parent: HTMLElement) {
         const elem = document.createElement("div");
         elem.className = "code-block";
 
+        const copy_elem = document.createElement("button");
+        copy_elem.innerHTML = icons.copy(20);
+        copy_elem.addEventListener("click", () => {
+            navigator.clipboard.writeText(code);
+        })
+        elem.appendChild(copy_elem);
+
         const content_elem = document.createElement("div");
         content_elem.className = "code-content";
 
@@ -144,7 +159,7 @@ function generateElement(tokens: string[], parent: HTMLElement) {
         }
 
         elem.appendChild(content_elem);
-
+        
         parent.appendChild(elem);
         return;
     }
@@ -300,6 +315,14 @@ export function generateTextElementPart(tokens: string[], parent: HTMLElement) {
     }
 }
 
-const tokens = tokenise(text);
+export function generatePage(path: string[]) {
+    const item = getItemFromPath(path);
+    const page = getPageFromItem(item);
 
-generate(tokens, document.getElementById("content-container")!);
+    const container = document.getElementById("content-container")!;
+    container.innerText = "";
+
+    generateFromText(page.content, container);
+}
+
+generateFromText(text, document.getElementById("content-container")!);

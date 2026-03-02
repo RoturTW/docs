@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&display=swap');
+
+a {
+    color: var(--link);
+}
+a:visited {
+    color: var(--link-visited);
+}
+
+body {
+    margin: 0px;
+
+    height: 100vh;
+
+    background-color: var(--back);
+}
+
+#topbar {
+    min-height: 64px;
+    
+    border-bottom: 1px solid var(--prim);
+}
+
+#app-container {
+    display: flex;
+    flex: 1;
+    
+    max-height: calc(100vh - 65px);
+
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+}
+
+#sidebar {
+    /* for the love of god, do not touch this */
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+
+    overflow-y: auto;
+    width: 250px;
+    height: calc(100vh - 65px);
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
+
+    overflow-y: auto;
+
+    background-color: var(--back);
+}
+
+#content-container {
+    width: 100%;
+    max-width: 750px;
+    min-width: 150px;
+}
+
+#content-container > div.md-container {
+    padding-bottom: 10px;
+}
