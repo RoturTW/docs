@@ -159,7 +159,23 @@ crazy
 
 @@box
 box :P
-
 @@box
+
+## Tabs
+
+@@tabs
+@@tab Js
+\`\`\`js
+console.log("hi");
+\`\`\`
+@@tab
+@@tab Fsl
+\`\`\`rs
+fn main() {
+  print("hi");
+}
+\`\`\`
+@@tab
+@@tabs
 
 `;

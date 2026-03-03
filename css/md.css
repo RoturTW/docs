@@ -12,28 +12,28 @@
     display: block;
 
     * {
-        span {
+        > span {
             white-space: pre;
             margin: 0px;
         }
 
-        bold {
+        > bold {
             font-weight: bold;
         }
         
-        italic {
+        > italic {
             font-style: italic;
         }
         
-        strikethrough {
+        > strikethrough {
             text-decoration: line-through;
         }
 
-        img {
+        > img {
             max-height: 30px;
         }
 
-        checkbox {
+        > checkbox {
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -88,7 +88,7 @@
 
         margin-bottom: 10px;
 
-        button {
+        > button {
             position: absolute;
             top: 5px;
             right: 5px;
@@ -108,7 +108,7 @@
 
             transition: background-color .1s;
         }
-        button:hover {
+        > button:hover {
             background-color: var(--tert);
         }
     }
@@ -135,25 +135,25 @@
 
         border-spacing: 0;
         
-        thead > tr > th {
+        > thead > tr > th {
             padding: 5px;
             border-spacing: 0px;
         }
-        tbody > tr > td {
+        > tbody > tr > td {
             padding: 5px;
         }
 
-        td, th {
+        > td, th {
             border-right: 1px solid var(--seco);
             border-bottom: 1px solid var(--seco);
         }
 
-        td:last-child,
-        th:last-child {
+        > td:last-child,
+        > th:last-child {
             border-right: none;
         }
 
-        tr:last-child td {
+        > tr:last-child td {
             border-bottom: none;
         }
     }
@@ -167,7 +167,7 @@
         max-width: 20%;
     }
 
-    .alert {
+    > .alert {
         margin-top: 10px;
         margin-bottom: 10px;
         padding-left: 15px;
@@ -175,70 +175,126 @@
 
         border-left: 3px solid var(--prim);
 
-        .header {
+        > .header {
             display: flex;
             align-items: center;
 
             margin-bottom: 10px;
             
-            svg {
+            > svg {
                 margin-right: 7px;
             }
-            p {
+            > p {
                 margin: 0;
                 font-weight: 600;
             }
         }
     }
 
-    .alert-note {
+    > .alert-note {
         border-color: var(--md-alert-note);
         .header {
             color: var(--md-alert-note);
         }
     }
-    .alert-tip {
+    > .alert-tip {
         border-color: var(--md-alert-tip);
         .header {
             color: var(--md-alert-tip);
         }
     }
-    .alert-important {
+    > .alert-important {
         border-color: var(--md-alert-important);
         .header {
             color: var(--md-alert-important);
         }
     }
-    .alert-warning {
+    > .alert-warning {
         border-color: var(--md-alert-warning);
         .header {
             color: var(--md-alert-warning);
         }
     }
-    .alert-caution {
+    > .alert-caution {
         border-color: var(--md-alert-caution);
         .header {
             color: var(--md-alert-caution);
         }
     }
 
-    .column {
+    > .column {
         display: flex;
 
-        div {
+        > div {
             display: flex;
             flex-direction: column;
             flex: 1;
         }
     }
 
-    .box {
+    > .box {
         background-color: var(--back);
         border: var(--seco) 2px solid;
         border-radius: 10px;
         padding: 10px;
 
         padding-bottom: 0px;
+    }
+
+    > .tabs {
+        background-color: var(--back);
+        border: var(--seco) 1px solid;
+        border-radius: 10px;
+
+        > .header {
+            display: flex;
+            height: 30px;
+
+            border-radius: 10px 10px 0 0;
+            background-color: var(--prim);
+            border-bottom: var(--seco) 1px solid;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+
+            > button {
+                padding: 0 15px;
+
+                border: none;
+                outline: none;
+                border-bottom: 0px solid var(--accent);
+                border-right: var(--seco) 1px solid;
+
+                background-color: var(--prim);
+                color: var(--text);
+
+                font-size: 15px;
+                text-wrap: nowrap;
+                cursor: pointer;
+
+                transition: background-color .1s, border-bottom .1s;
+            }
+            > button.selected {
+                border-bottom: 2.5px solid var(--accent);
+            }
+            > button:hover {
+                background-color: var(--seco);
+            }
+        }
+
+        > .body {
+            padding: 10px;
+            margin-bottom: -10px;
+
+            > div {
+                display: none;
+            }
+            > div.selected {
+                display: block;
+            }
+        }
     }
 }
 

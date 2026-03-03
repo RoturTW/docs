@@ -205,7 +205,7 @@ function generateElement(tokens: string[], parent: HTMLElement) {
             generateUntil(tokens, "@@column", column);
             if (tokens[0] == "@@column")
                 tokens.shift();
-            while (tokens[0] == "\n" && tokens.length > 0)
+            while (tokens[0] == "\n")
                 tokens.shift();
             elem.appendChild(column);
             column_count ++;
@@ -227,6 +227,58 @@ function generateElement(tokens: string[], parent: HTMLElement) {
 
         parent.appendChild(elem);
         return;
+    }
+
+    if (tokens[0] == "@@tabs") {
+        tokens.shift();
+
+        let elem = document.createElement("div");
+        elem.className = "tabs";
+
+        let header = document.createElement("div");
+        header.className = "header";
+        elem.appendChild(header);
+
+        let body = document.createElement("div");
+        body.className = "body";
+
+        while (tokens[0] != "@@tabs" && tokens.length > 0) {
+            while (tokens[0] as string == "\n")
+                tokens.shift();
+
+            if (tokens[0] == "@@tab") {
+                tokens.shift();
+                while (tokens[0] as string == " ")
+                    tokens.shift();
+
+                let tabText = "";
+                while (tokens[0] != "\n" && tokens.length > 0)
+                    tabText += tokens.shift();
+                
+                let tabElem = document.createElement("div");
+                generateUntil(tokens, "@@tab", tabElem);
+                if (tokens[0] == "@@tab")
+                    tokens.shift();
+                body.appendChild(tabElem);
+
+                let tabHeaderElem = document.createElement("button");
+                tabHeaderElem.addEventListener("click", () => {
+                    [...header.children, ...body.children].filter(e => e.classList.contains("selected")).forEach(e => e.classList.remove("selected"));
+                    tabHeaderElem.classList.add("selected");
+                    tabElem.classList.add("selected");
+                })
+                tabHeaderElem.textContent = tabText;
+                header.append(tabHeaderElem);
+
+                continue;
+            }
+            tokens.shift();
+        }
+
+        elem.appendChild(body);
+        
+        parent.appendChild(elem)
+        return
     }
 
     if (isTableRow(tokens)) {
