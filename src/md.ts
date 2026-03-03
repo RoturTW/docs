@@ -3,7 +3,7 @@ import { icons } from "./icons";
 import { generateList, generateTable, isListMarker, isTableRow, removeIndent } from "./md_utils";
 
 function tokenise(text: string): string[] {
-    const tkns = text.match(/https?:\/\/[^\s)]+|___|__|_| *-+:\|| *-+ *\||-+|---|\*\*\*|__|!?\[[^\]]+\]\(https?:\/\/[^\s)]+\)|~~|\^|~|\*\*|#|>\s*\[!\w+\]|>| +|```|`|\d+\.|\.+|[a-zA-Z.]+|\n|[a-zA-Z]+|./gm);
+    const tkns = text.match(/https?:\/\/[^\s)]+|___|__|_| *-+:\|| *-+ *\||\[[ x]\]|-+|---|\*\*\*|__|!?\[[^\]]+\]\(https?:\/\/[^\s)]+\)|~~|\^|~|\*\*|#|>\s*\[!\w+\]|>| +|@@\w+|```|`|\d+\.|\.+|[a-zA-Z.]+|\n|[a-zA-Z]+|./gm);
     
     return tkns as string[];
 }
@@ -28,6 +28,16 @@ function generate(tokens: string[], parent: HTMLElement): HTMLDivElement {
     parent.appendChild(container);
 
     return container;
+}
+
+function generateUntil(tokens: string[], until: string, parent: HTMLElement) {
+    while (tokens[0] == "\n" && tokens.length > 0)
+        tokens.shift();
+    while (tokens[0] != until && tokens.length > 0) {
+        generateElement(tokens, parent);
+        while (tokens[0] == "\n" && tokens.length > 0)
+            tokens.shift();
+    }
 }
 
 function generateElement(tokens: string[], parent: HTMLElement) {
@@ -182,6 +192,43 @@ function generateElement(tokens: string[], parent: HTMLElement) {
         return;
     }
 
+    if (tokens[0] == "@@column") {
+        tokens.shift();
+
+        const elem = document.createElement("div");
+        elem.className = "column";
+
+        let column_count = 0;
+        while (tokens[0] != "@@column" && tokens.length > 0 && column_count < 2) {
+            let column = document.createElement("div");
+            column.className = "md-container";
+            generateUntil(tokens, "@@column", column);
+            if (tokens[0] == "@@column")
+                tokens.shift();
+            while (tokens[0] == "\n" && tokens.length > 0)
+                tokens.shift();
+            elem.appendChild(column);
+            column_count ++;
+        }
+
+        parent.appendChild(elem);
+        return;
+    }
+
+    if (tokens[0] == "@@box") {
+        tokens.shift();
+
+        const elem = document.createElement("div");
+        elem.className = "box";
+
+        generateUntil(tokens, "@@box", elem);
+        if (tokens[0] == "@@box")
+            tokens.shift();
+
+        parent.appendChild(elem);
+        return;
+    }
+
     if (isTableRow(tokens)) {
         generateTable(tokens, parent);
         return;
@@ -301,6 +348,18 @@ export function generateTextElementPart(tokens: string[], parent: HTMLElement) {
         elem.href = url;
         elem.textContent = url;
         parent.appendChild(elem);
+        return;
+    }
+
+    if (["[ ]","[x]"].includes(tokens[0])) {
+        const is_checked = tokens.shift() == "[x]";
+
+        const elem = document.createElement("checkbox");
+        if (is_checked) {
+            elem.innerHTML = icons.check(15);
+        }
+        parent.appendChild(elem);
+        
         return;
     }
 

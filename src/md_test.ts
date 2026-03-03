@@ -114,12 +114,12 @@ https://www.example.com/blog/article#comments
 ![Minion](https://octodex.github.com/images/minion.png)
 ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg)
 
-## [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+## Subscript / Superscript
 
 - 19^th^
 - H~2~O
 
-## [Custom containers](https://github.com/markdown-it/markdown-it-container)
+## Alerts
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
@@ -135,5 +135,31 @@ https://www.example.com/blog/article#comments
 
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
+
+## Checkboxes
+
+[ ] bleh
+[x] hi
+
+## Columns
+
+@@column
+hi
+wow
+so
+basically
+crazy
+@@column
+\`\`\`
+crazy
+\`\`\`
+@@column
+
+## Box
+
+@@box
+box :P
+
+@@box
 
 `;

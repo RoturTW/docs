@@ -97,6 +97,6 @@ function generateDirPage(page: DirPage, path: string[], container: HTMLElement) 
     container.appendChild(grid);
 }
 
-setTimeout(() => {
-    gotoPage(["fr"]);
-}, 100);
+//setTimeout(() => {
+//    gotoPage(["fr"]);
+//}, 100);

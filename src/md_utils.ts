@@ -53,7 +53,7 @@ export function generateList(tokens: string[], parent: HTMLElement, indent: numb
 }
 
 export function isListMarker(token: string): boolean {
-    return token != null && (["+", "-", "*"].includes(token) || /\d+\./.test(token));
+    return token != null && (["+", "-"].includes(token) || /\d+\./.test(token));
 }
 
 export function isTableRow(tokens: string[], offset: number = 0): boolean {
